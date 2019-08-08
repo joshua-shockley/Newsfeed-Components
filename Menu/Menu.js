@@ -1,5 +1,4 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
-
 let menuItems = [
     'Students',
     'Faculty',
@@ -8,32 +7,29 @@ let menuItems = [
     'Music',
     'Log Out'
 ];
-const atTop = document.querySelector('header');
+const atTop = document.querySelector('.header');
 
+atTop.appendChild(createNew(menuItems));
 
-const theMenu = document.querySelector('menu-button');
-
-function createNew() {
+function createNew(items) {
 
     const myMenu = document.createElement('div');
     const theList = document.createElement('ul');
 
+    myMenu.appendChild(theList);
 
-    menuItems.forEach((i) => {
+    items.forEach((i) => {
         const list = document.createElement('li');
         list.textContent = i;
-        theList.appendChild(li);
-        console.log(i);
+        theList.appendChild(list);
     })
 
-    menuItems.classList.add('menu');
+    myMenu.classList.add('menu');
 
-    const mButton = document.querySelector('menu-button');
+    const mButton = document.querySelector('.menu-button');
 
-    mButton.addEventListener('click', (event) => {
-        mButton.classList.toggle('menu')
-        mButton.classList.toggle('menu--open')
-        mButton.classList.toggle('toggle-on')
+    mButton.addEventListener('click', event => {
+        myMenu.classList.toggle('menu--open')
     })
 
 

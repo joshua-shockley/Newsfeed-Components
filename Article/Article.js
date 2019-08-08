@@ -121,7 +121,7 @@ const data = [{
 //Hint: You will need to use createElement more than once here!
 
 const mainArticles = document.querySelector('.articles');
-console.log(mainArticles);
+// console.log(mainArticles);
 
 data.forEach(item => {
     mainArticles.appendChild(createData(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph))
